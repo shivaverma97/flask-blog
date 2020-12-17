@@ -1,0 +1,127 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+   
+h1,h3,h2,h5 {
+    /* padding: 10px 20px;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    margin-bottom: 15px; */
+    color: #3a3939;
+    margin-top: 5px;
+  }
+h4, h6{padding: 10px 20px;
+    border: 1px solid #0a0a0a;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    color: #3a3939;
+
+  }
+p2{color:#087ccf;
+  font-family: Apple Chancery, cursive ;
+  }
+  
+p3{color: #011c2f;}
+
+p1{
+  color: #252525;
+  }
+.bg-steel {
+    background-color: #011c2f;
+  }
+  
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+.content-section-2 {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #a8a8a8;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #d6d4d4;
+    border-radius: 1px;
+    margin-bottom: 20px;
+  }
+  
+.article-title {
+    color: #2f2f2f;
+  }
+  
+a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+  
+.article-content {
+    white-space: pre-line;
+  }
+  
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+.post-img {
+    height: 430px;
+    width: 550px;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  a
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+.account-heading {
+    font-size: 2.5rem;
+  }
+
+.username-style {
+  color: #2f2f2f;
+  margin-right: 20px;
+}
+
+.date_posted {
+  color: #2f2f2f;
+  margin-left: 400px;
+}

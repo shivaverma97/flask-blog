@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <legend class="border-bottom-mb4">Account info </legend>
+        <div class="media">
+            <img class="rounded-circle account-img" src='{{image_file}}'>
+            <div class="media-body">
+                <h2 class="account-heading">{{user.username}}</h2>
+                <p class="text-secondary">{{user.email}}</p>
+                <p class="text-secondary">Posts by {{user.username}} ({{posts.total}})</p>
+            </div>
+        </div>
+    </div>
+    {% for post in posts.items %}
+        <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.profile_pic) }}">
+        <div class="media-body">
+            <div class="article-metadata">
+            <a class="mr-2" href="{{url_for('user_account', username = user.username, page = page_num)}}">{{ post.author.username }}</a>
+            <small class="date_posted">{{ post.date_posted.strftime("%d %B, %Y") }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('postinfo', post_id=post.id) }}">{{ post.title }}</a></h2>
+            <img class="post-img" src="{{ url_for('static', filename='uploaded_pics/' + post.photo) }}">
+            <p class="article-content">{{ post.content }}</p>
+        </div>
+        </article>
+    {% endfor %}
+    {% for page_num in posts.iter_pages(left_edge=1,right_edge=1,left_current=1,right_current=2) %}
+        {% if page_num %}
+            {% if posts.page == page_nums %}
+                <a class="btn btn-info mb-4" href="{{url_for('user_account', username = user.username , page=page_num)}}">{{ page_num }}</a>
+            {% else %}
+                <a class="btn btn-outline-info mb-4" href="{{url_for('user_account', username = user.username, page = page_num)}}">{{ page_num }}</a>
+            {% endif %}
+        {% else %}
+        ...
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
