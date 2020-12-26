@@ -229,7 +229,7 @@ def request_reset():
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         send_verrification_email(user)
-        flash(f'An Email has been sent to {user.email} with all the instructions.')
+        flash(f'An Email has been sent to {user.email} with all the instructions.','success')
         return redirect(url_for('login'))
     return render_template('request_reset.html', title = 'request reset token', form = form)
 
